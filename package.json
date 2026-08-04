@@ -1,0 +1,14 @@
+{
+  "name": "lyricq",
+  "version": "1.0.0",
+  "description": "LyricQ — Frank Ocean lyrics quiz",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

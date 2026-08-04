@@ -1,0 +1,5 @@
+node_modules/
+files/
+lyrics-game-file-cleanup/
+.DS_Store
+*.log
