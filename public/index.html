@@ -101,6 +101,28 @@ main{display:flex;flex-direction:column;justify-content:center;padding:26px 0}
   border:1px solid var(--line);border-radius:4px;padding:3px 7px;
 }
 
+/* hint */
+.hint-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:18px;background:none;border:1px solid var(--line);
+  border-radius:8px;padding:8px 14px;cursor:pointer;
+  font-family:var(--mono);font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--dim);transition:all .2s;
+}
+.hint-btn:hover{border-color:var(--iris);color:var(--iris)}
+.hint-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+.hint-box{
+  margin-top:14px;padding:12px 14px;
+  background:rgba(164,147,255,.08);border:1px solid rgba(164,147,255,.2);
+  border-radius:8px;font-size:14px;line-height:1.5;color:var(--bone);
+  animation:rise .25s ease both;
+}
+.hint-label{
+  display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--iris);margin-bottom:5px;
+}
+.hint-icon{font-size:11px;opacity:.6}
+
 /* reveal */
 .reveal{margin-top:22px;border-top:1px solid var(--line);padding-top:18px;position:relative}
 .verdict{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
@@ -207,6 +229,7 @@ var action  = document.getElementById("action");
 
 var order = [], turn = 0, results = [];
 var hits = [], active = 0;
+var hintUsed = false;
 
 function shuffle(list){
   var a = list.slice();
@@ -310,8 +333,19 @@ function drawHeader(){
   }
 }
 
+function showHint(){
+  hintUsed = true;
+  var q = order[turn];
+  var btn = document.getElementById("hintBtn");
+  if (btn) btn.hidden = true;
+  var target = document.getElementById("hintArea");
+  if (target) target.innerHTML =
+    '<div class="hint-box"><span class="hint-label">Hint</span>' + esc(q.hint) + '</div>';
+}
+
 function showRound(){
   var q = order[turn];
+  hintUsed = false;
   drawHeader();
   stage.innerHTML =
     '<article class="card rise">' +
@@ -322,6 +356,13 @@ function showRound(){
       '<div class="lyric">' + esc(q.lyric) +
         (q.placeholder ? '<br><span class="stub">Placeholder</span>' : '') +
       '</div>' +
+      (q.hint ? '<div style="text-align:center">' +
+        '<button class="hint-btn" id="hintBtn" type="button" onclick="showHint()">' +
+          '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' +
+          'Hint' +
+        '</button>' +
+        '<div id="hintArea"></div>' +
+      '</div>' : '') +
     '</article>';
 
   action.hidden = true;
@@ -360,7 +401,7 @@ function guess(title){
   var q = order[turn];
   var correct = title === q.song;
   results.push({ song: q.song, album: q.album, difficulty: q.difficulty,
-                 guessed: title, correct: correct });
+                 guessed: title, correct: correct, hinted: hintUsed });
   drawHeader();
 
   var card = stage.querySelector(".card");
@@ -407,6 +448,7 @@ function showOver(){
       '<div class="row">' +
         '<span class="n">' + pad(i + 1) + '</span>' +
         '<span class="t">' + esc(r.song) + '<small>' + esc(r.album) + ' &middot; ' + r.difficulty + '</small></span>' +
+        (r.hinted ? '<span style="font-family:var(--mono);font-size:10px;color:var(--iris);margin-right:4px" title="Hint used">?</span>' : '') +
         '<span class="k k--' + (r.correct ? "hit" : "miss") + '">' + (r.correct ? "\u2713" : "\u2715") + '</span>' +
       '</div>';
   }

@@ -6,7 +6,8 @@
       "album": "Channel Orange",
       "difficulty": "easy",
       "placeholder": false,
-      "lyric": "A tornado flew around my room before you came\nExcuse the mess it made, it usually doesn't rain in"
+      "lyric": "A tornado flew around my room before you came\nExcuse the mess it made, it usually doesn't rain in",
+      "hint": "Frank titled this after what your brain does on repeat about someone — spelled the way it sounds half-asleep"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "album": "Nostalgia, Ultra",
       "difficulty": "easy",
       "placeholder": false,
-      "lyric": "I think I started somethin', I got what I wanted\nDid-didn't, I can't feel nothin', superhuman"
+      "lyric": "I think I started somethin', I got what I wanted\nDid-didn't, I can't feel nothin', superhuman",
+      "hint": "Frank titled this after something that removes all feeling — the misspelling matches how numb the song gets"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "album": "Channel Orange",
       "difficulty": "easy",
       "placeholder": false,
-      "lyric": "Oh, oh, oh, oh\nSet the cheetahs on the loose"
+      "lyric": "Oh, oh, oh, oh\nSet the cheetahs on the loose",
+      "hint": "Frank named this after monuments built for royalty — the song traces what happened between then and now"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "album": "Blonde",
       "difficulty": "easy",
       "placeholder": false,
-      "lyric": "'Round your city, 'round the clock\nEverybody needs you"
+      "lyric": "'Round your city, 'round the clock\nEverybody needs you",
+      "hint": "Frank titled this after the hours when everything shifts — when the day job ends and the real thoughts start"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "album": "Blonde",
       "difficulty": "easy",
       "placeholder": false,
-      "lyric": "I thought that I was dreamin' when you said you love me\nThe start of nothin'"
+      "lyric": "I thought that I was dreamin' when you said you love me\nThe start of nothin'",
+      "hint": "Frank named this after something that grows on you until it's part of the structure — beautiful, but try removing it"
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "album": "Blonde",
       "difficulty": "easy",
       "placeholder": false,
-      "lyric": "Yeah, yeah oh\nYeah, yeah yeah"
+      "lyric": "Yeah, yeah oh\nYeah, yeah yeah",
+      "hint": "Frank titled this after the colors a sky turns right before everything changes"
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "album": "Channel Orange",
       "difficulty": "medium",
       "placeholder": false,
-      "lyric": "Too many bottles of this wine we can't pronounce\nToo many bowls of that green, no Lucky Charms"
+      "lyric": "Too many bottles of this wine we can't pronounce\nToo many bowls of that green, no Lucky Charms",
+      "hint": "The title adds a superhero-level adjective to wealthy children"
     },
     {
       "id": 8,
@@ -62,7 +69,8 @@
       "album": "Channel Orange",
       "difficulty": "medium",
       "placeholder": false,
-      "lyric": "Double D\nBig full breasts on my baby"
+      "lyric": "Double D\nBig full breasts on my baby",
+      "hint": "Frank titled this after the state you don't notice until you're too far off course to care"
     },
     {
       "id": 9,
@@ -70,7 +78,8 @@
       "album": "Channel Orange",
       "difficulty": "medium",
       "placeholder": false,
-      "lyric": "The best song wasn't the single, but you weren't either\nLiving in Ladera Heights, the black Beverly Hills"
+      "lyric": "The best song wasn't the single, but you weren't either\nLiving in Ladera Heights, the black Beverly Hills",
+      "hint": "Frank titled this after what comfortable people call their bubble — the kind of existence that's too easy to question"
     },
     {
       "id": 10,
@@ -78,7 +87,8 @@
       "album": "Blonde",
       "difficulty": "medium",
       "placeholder": false,
-      "lyric": "Poolside convo about your summer last night, ooh, yeah\nAbout your summer last night"
+      "lyric": "Poolside convo about your summer last night, ooh, yeah\nAbout your summer last night",
+      "hint": "Frank named this after the only thing between you and a 2am text you'd regret"
     },
     {
       "id": 11,
@@ -86,7 +96,8 @@
       "album": "Blonde",
       "difficulty": "medium",
       "placeholder": false,
-      "lyric": "Hand me a towel I'm dirty dancing by myself\nGone off tabs of that acid"
+      "lyric": "Hand me a towel I'm dirty dancing by myself\nGone off tabs of that acid",
+      "hint": "Frank titled this after what a musician plays when the band drops out — he revisits the idea later on Blonde"
     },
     {
       "id": 12,
@@ -94,7 +105,8 @@
       "album": "Single",
       "difficulty": "medium",
       "placeholder": false,
-      "lyric": "My guy pretty like a girl\nAnd he got fight stories to tell"
+      "lyric": "My guy pretty like a girl\nAnd he got fight stories to tell",
+      "hint": "Frank named this after a brand whose logo faces two directions — he liked the symmetry"
     },
     {
       "id": 13,
@@ -102,7 +114,8 @@
       "album": "Channel Orange",
       "difficulty": "hard",
       "placeholder": false,
-      "lyric": "Taxi driver\nBe my shrink for the hour"
+      "lyric": "Taxi driver\nBe my shrink for the hour",
+      "hint": "Frank titled this after what it feels like to worship something that will never love you back"
     },
     {
       "id": 14,
@@ -110,7 +123,8 @@
       "album": "Channel Orange",
       "difficulty": "hard",
       "placeholder": false,
-      "lyric": "And the peaches and the mangos that you could sell for me\nWhat do you think my brain is made for?"
+      "lyric": "And the peaches and the mangos that you could sell for me\nWhat do you think my brain is made for?",
+      "hint": "Frank named this after what's inside your skull — except he gave it a warmer color than science does"
     },
     {
       "id": 15,
@@ -118,7 +132,8 @@
       "album": "Channel Orange",
       "difficulty": "hard",
       "placeholder": false,
-      "lyric": "You don't know how little you matter until you're all alone\nIn the middle of Arkansas, with a little rock left in that glass dick"
+      "lyric": "You don't know how little you matter until you're all alone\nIn the middle of Arkansas, with a little rock left in that glass dick",
+      "hint": "Frank titled this after a substance — two syllables, no metaphor, the song doesn't look away"
     },
     {
       "id": 16,
@@ -126,7 +141,8 @@
       "album": "Channel Orange",
       "difficulty": "hard",
       "placeholder": false,
-      "lyric": "Mosh pits & bare chest\nStage diving sky diver"
+      "lyric": "Mosh pits & bare chest\nStage diving sky diver",
+      "hint": "Frank titled this after people known for silence and stillness — ironic, given what the song sounds like"
     },
     {
       "id": 17,
@@ -134,7 +150,8 @@
       "album": "Blonde",
       "difficulty": "hard",
       "placeholder": false,
-      "lyric": "The markings on your surface\nYour speckled face"
+      "lyric": "The markings on your surface\nYour speckled face",
+      "hint": "Frank named this after a mythological hero who killed a dragon and bathed in its blood — then misspelled it"
     },
     {
       "id": 18,
@@ -142,7 +159,8 @@
       "album": "Blonde",
       "difficulty": "hard",
       "placeholder": false,
-      "lyric": "Bad luck to talk on these rides\nMind on the road, your dilated eyes"
+      "lyric": "Bad luck to talk on these rides\nMind on the road, your dilated eyes",
+      "hint": "The title pairs the most boring color with the least boring car"
     },
     {
       "id": 19,
@@ -150,7 +168,8 @@
       "album": "Blonde",
       "difficulty": "hard",
       "placeholder": false,
-      "lyric": "I will always love you\nHow I do"
+      "lyric": "I will always love you\nHow I do",
+      "hint": "Frank titled this after the word you say when you want someone to be okay — even after letting them go"
     },
     {
       "id": 20,
@@ -158,7 +177,8 @@
       "album": "Blonde",
       "difficulty": "hard",
       "placeholder": false,
-      "lyric": "These bitches want Nikes\nThey looking for a check"
+      "lyric": "These bitches want Nikes\nThey looking for a check",
+      "hint": "The title is a Greek goddess of victory who pivoted to selling trainers"
     }
   ],
   "songs": [
