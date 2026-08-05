@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LyricQ — Sign in</title>
+<style>
+:root{
+  --ink:#12100F; --panel:#1B1817; --panel-2:#252120;
+  --line:rgba(237,231,222,.13); --bone:#EDE7DE; --dim:#948B83;
+  --iris:#A493FF; --easy:#7BC98E; --hard:#E37766;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--ink);color:var(--bone);font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;display:flex;justify-content:center}
+.app{width:100%;max-width:460px;min-height:100vh;min-height:100dvh;
+  display:flex;flex-direction:column;justify-content:center;padding:40px 20px}
+.mark{font-family:var(--mono);font-size:12px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--bone);margin-bottom:26px}
+.mark i{display:inline-block;width:5px;height:5px;border-radius:50%;
+  background:var(--iris);margin-left:4px;vertical-align:2px;font-style:normal}
+.hero{font-family:var(--serif);font-size:clamp(38px,12vw,52px);line-height:.98;letter-spacing:-.02em}
+.hero em{font-style:italic;color:var(--iris)}
+.tag{margin-top:14px;font-size:15px;line-height:1.5;color:var(--dim);max-width:24em}
+form{margin-top:30px;display:flex;flex-direction:column;gap:12px}
+.field label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);margin-bottom:7px}
+input{width:100%;background:var(--panel-2);color:var(--bone);
+  border:1px solid var(--line);border-radius:12px;
+  padding:15px 16px;font-family:var(--sans);font-size:16px;outline:none}
+input::placeholder{color:var(--dim)}
+input:focus{border-color:var(--iris)}
+.btn{width:100%;background:var(--iris);color:#191320;border:0;border-radius:12px;
+  padding:16px;font-family:var(--sans);font-size:15px;font-weight:650;cursor:pointer;margin-top:6px}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:.6;cursor:default}
+.msg{margin-top:4px;font-size:13px;line-height:1.5;min-height:1.2em}
+.msg--err{color:var(--hard)}
+.msg--ok{color:var(--easy)}
+.switch{margin-top:22px;font-size:14px;color:var(--dim);text-align:center}
+.switch button{background:none;border:0;color:var(--iris);font:inherit;cursor:pointer;
+  padding:0;text-decoration:underline;text-underline-offset:2px}
+.hint{margin-top:6px;font-size:12px;color:var(--dim);line-height:1.5}
+:focus-visible{outline:2px solid var(--iris);outline-offset:2px}
+[hidden]{display:none !important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="mark">LyricQ<i></i></div>
+
+  <h1 class="hero" id="title">Sign <em>in</em></h1>
+  <p class="tag" id="subtitle">Pick up where you left off.</p>
+
+  <form id="form" novalidate>
+    <div class="field" id="usernameField" hidden>
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" autocomplete="username"
+             autocapitalize="off" autocorrect="off" spellcheck="false"
+             placeholder="3–30 letters, numbers, or _">
+    </div>
+
+    <div class="field" id="identifierField">
+      <label for="identifier">Username or email</label>
+      <input id="identifier" name="identifier" type="text" autocomplete="username"
+             autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="you or you@email.com">
+    </div>
+
+    <div class="field" id="emailField" hidden>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email"
+             autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="you@email.com">
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" placeholder="••••••••">
+      <div class="hint" id="pwHint" hidden>At least 8 characters.</div>
+    </div>
+
+    <div class="msg" id="msg" role="status" aria-live="polite"></div>
+
+    <button class="btn" id="submit" type="submit">Sign in</button>
+  </form>
+
+  <div class="switch">
+    <span id="switchText">New here?</span>
+    <button type="button" id="switchBtn">Create an account</button>
+  </div>
+</div>
+
+<script>
+var mode = "login"; // "login" | "register"
+
+var el = {
+  title: document.getElementById("title"),
+  subtitle: document.getElementById("subtitle"),
+  form: document.getElementById("form"),
+  usernameField: document.getElementById("usernameField"),
+  identifierField: document.getElementById("identifierField"),
+  emailField: document.getElementById("emailField"),
+  pwHint: document.getElementById("pwHint"),
+  msg: document.getElementById("msg"),
+  submit: document.getElementById("submit"),
+  switchText: document.getElementById("switchText"),
+  switchBtn: document.getElementById("switchBtn"),
+  username: document.getElementById("username"),
+  identifier: document.getElementById("identifier"),
+  email: document.getElementById("email"),
+  password: document.getElementById("password"),
+};
+
+// Where to go after a successful sign-in. Only same-origin relative paths.
+function nextUrl(){
+  var p = new URLSearchParams(location.search).get("next");
+  return (p && p.charAt(0) === "/" && p.charAt(1) !== "/") ? p : "/";
+}
+
+function setMode(next){
+  mode = next;
+  var reg = mode === "register";
+  el.title.innerHTML = reg ? 'Create <em>account</em>' : 'Sign <em>in</em>';
+  el.subtitle.textContent = reg ? 'One minute, then you’re playing.' : 'Pick up where you left off.';
+  el.usernameField.hidden = !reg;
+  el.emailField.hidden = !reg;
+  el.identifierField.hidden = reg;
+  el.pwHint.hidden = !reg;
+  el.password.setAttribute("autocomplete", reg ? "new-password" : "current-password");
+  el.submit.textContent = reg ? "Create account" : "Sign in";
+  el.switchText.textContent = reg ? "Already have an account?" : "New here?";
+  el.switchBtn.textContent = reg ? "Sign in" : "Create an account";
+  el.msg.textContent = "";
+  el.msg.className = "msg";
+}
+
+el.switchBtn.addEventListener("click", function(){
+  setMode(mode === "login" ? "register" : "login");
+  (mode === "register" ? el.username : el.identifier).focus();
+});
+
+function say(text, kind){
+  el.msg.textContent = text;
+  el.msg.className = "msg" + (kind ? " msg--" + kind : "");
+}
+
+el.form.addEventListener("submit", function(e){
+  e.preventDefault();
+  el.submit.disabled = true;
+  say("", null);
+
+  var reg = mode === "register";
+  var url = reg ? "/api/auth/register" : "/api/auth/login";
+  var payload = reg
+    ? { username: el.username.value, email: el.email.value, password: el.password.value }
+    : { identifier: el.identifier.value, password: el.password.value };
+
+  fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  })
+  .then(function(r){ return r.json().then(function(d){ return { ok: r.ok, data: d }; }); })
+  .then(function(res){
+    if (!res.ok){
+      say(res.data && res.data.error ? res.data.error : "Something went wrong. Try again.", "err");
+      el.submit.disabled = false;
+      return;
+    }
+    say("Welcome, " + res.data.user.username + ".", "ok");
+    location.href = nextUrl();
+  })
+  .catch(function(){
+    say("Couldn’t reach the server. Check your connection.", "err");
+    el.submit.disabled = false;
+  });
+});
+
+// If already signed in, skip straight through.
+fetch("/api/auth/me", { headers: { "Accept": "application/json" } })
+  .then(function(r){ return r.json(); })
+  .then(function(d){ if (d && d.user) location.href = nextUrl(); })
+  .catch(function(){});
+
+setMode("login");
+</script>
+</body>
+</html>

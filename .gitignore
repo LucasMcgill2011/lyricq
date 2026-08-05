@@ -1,5 +1,9 @@
 node_modules/
 files/
+data.db
+data.db-shm
+data.db-wal
+*.db
 lyrics-game-file-cleanup/
 .DS_Store
 *.log
