@@ -22,6 +22,13 @@ The hint should make you think "oh, that must be ___" without using the actual t
 ### 5. Don't lean on trivia.
 No facts about misspellings, brand logos, Greek mythology origins, or wordplay about the title itself. Those are fun facts, not hints about how Frank uses the concept.
 
+### 6. One metaphor lane — don't mix images.
+If the hint uses a physical metaphor, commit to it all the way through. Don't start with one image (stripping, peeling) and land on a different one (shattering, breaking). Every verb and noun in the metaphor should belong to the same physical world. If the title itself has a literal meaning (e.g. a rock), use that as the image and stay in it — the title word does double duty as both the hint and the metaphor.
+
+**Example (Crack Rock):**
+- Bad: "…hooks you once and strips away everything you had until there's nothing left to shatter" *(stripping is peeling/removal, shattering is breaking — two different physical actions in one sentence)*
+- Good: "…wears you down like water over stone so slowly you don't notice the cracks until there's nothing solid left" *(erosion all the way through — wears down, water over stone, cracks, nothing solid. "Stone" hints at rock, "cracks" hints at crack, and the erosion mirrors how addiction actually works)*
+
 ---
 
 ## Vocabulary Direction Per Hint
@@ -44,7 +51,7 @@ When rewriting each hint, lean into these word-worlds while talking about the so
 | 12 | Chanel | double-sided, facing both ways, flip | duality in who Frank is |
 | 13 | Bad Religion | *(passes — no rewrite needed)* | worshipping something that won't love you back |
 | 14 | Pink Matter | wired, firing, pulsing, warm | desire and thought blurring together |
-| 15 | Crack Rock | hit, hooked, shattered, stripped | addiction taking everything away |
+| 15 | Crack Rock | wears down, water over stone, erodes, cracks | addiction slowly eroding everything you are |
 | 16 | Monks | devoted, disciplined, worship, vow | obsessive dedication and restraint |
 | 17 | Seigfried | armor, invincible, weak spot, exposed | questioning whether being untouchable is worth it |
 | 18 | White Ferrari | cruising, drifting, passenger seat, coast | a relationship gliding toward its end |
@@ -53,19 +60,27 @@ When rewriting each hint, lean into these word-worlds while talking about the so
 
 ---
 
-## Hints That Already Pass (No Changes Needed)
+## Final Approved Hints
 
-- **Pink + White (#6):** "Frank titled this after the colors a sky turns right before everything changes"
-- **Lost (#8):** "Frank titled this after the state you don't notice until you're too far off course to care"
-- **Self Control (#10):** "Frank named this after the only thing between you and a 2am text you'd regret"
-- **Bad Religion (#13):** "Frank titled this after what it feels like to worship something that will never love you back"
-- **Godspeed (#19):** "Frank titled this after the word you say when you want someone to be okay even after letting them go"
-
-## Hints That Need Minor Fixes
-
-- **Nights (#4):** Close — tighten into one flowing sentence
-- **Sweet Life (#9):** Close — merge into one thought
-
-## Hints That Need Full Rewrites
-
-1, 2, 3, 5, 7, 11, 12, 14, 15, 16, 17, 18, 20
+| # | Song | Hint |
+|---|------|------|
+| 1 | Thinkin Bout You | "Frank titled this after the thing your mind keeps doing about someone long after you should've moved on" |
+| 2 | Novacane | "Frank titled this after the numbness that spreads through a connection until neither person can feel anything at all" |
+| 3 | Pyramids | "Frank titled this after monuments built to last forever for a kind of royalty that crumbled into something unrecognizable" |
+| 4 | Nights | "Frank titled this after the hours when everything you buried during the day finally surfaces" |
+| 5 | Ivy | "Frank titled this after how a first love grew into him so deep he couldn't pull it out without taking a piece of him with it" |
+| 6 | Pink + White | "Frank titled this after the colors a sky turns right before everything changes" |
+| 7 | Super Rich Kids | "Frank titled this after kids who had everything overflowing around them but were still somehow completely empty inside" |
+| 8 | Lost | "Frank titled this after the state you don't notice until you're too far off course to care" |
+| 9 | Sweet Life | "Frank titled this after the kind of cushioned existence that feels so comfortable nobody ever thinks to question it" |
+| 10 | Self Control | "Frank named this after the only thing between you and a 2am text you'd regret" |
+| 11 | Solo | "Frank titled this after the clarity and loneliness you only find when everyone else drops away and it's just you" |
+| 12 | Chanel | "Frank titled this after a name from fashion that faces both ways because he needed something that could hold every side of who he is at once" |
+| 13 | Bad Religion | "Frank titled this after what it feels like to worship something that will never love you back" |
+| 14 | Pink Matter | "Frank titled this after the part of you that's always firing between desire and thought until you can't tell which one is pulsing louder" |
+| 15 | Crack Rock | "Frank titled this after the thing that wears you down like water over stone so slowly you don't notice the cracks until there's nothing solid left" |
+| 16 | Monks | "Frank titled this after people whose devotion is so total they vow away everything else just to worship one thing completely" |
+| 17 | Seigfried | "Frank titled this after the feeling of building armor around yourself everywhere except the one spot that could still hurt you and wondering if being untouchable was ever worth it" |
+| 18 | White Ferrari | "Frank titled this after something beautiful that coasts so quietly you don't realize it's drifting toward the end until the ride is already over" |
+| 19 | Godspeed | "Frank titled this after the word you say when you want someone to be okay even after letting them go" |
+| 20 | Nikes | "Frank titled this after what everyone keeps chasing and running after like there's a finish line that will finally make them feel something" |
